@@ -16,6 +16,7 @@ app.get('/settings', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'settings.html'));
 });
 
+
 app.post('/api/ai', (req, res) => {
   const userMessage = req.body.message;
   console.log('Received from client:', userMessage);
