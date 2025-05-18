@@ -44,9 +44,11 @@ app.get('/settings', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'settings.html'));
 });
 
+
 app.post('/api/ai', async (req, res) => {
     try {
         const userMessage = req.body.message;
+
 
         const response = await axios.post(
             'https://openrouter.ai/api/v1/chat/completions',

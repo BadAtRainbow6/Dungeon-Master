@@ -1,38 +1,66 @@
 body {
     font-family: Arial, sans-serif;
-    background: #5C4033;
+    background: #4B3F72;
     color: #f0f0f0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Start vertically so nav doesn't clash */
     height: 100vh;
     margin: 0;
+    text-align: center;
+}
+
+/* Center wrapper for all content */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 250px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    color: #FAF3E0;
 }
 
 input[type="text"] {
     width: 300px;
     padding: 10px;
-    background: #333;
-    color: #fff;
+    background: #D3CFC9;
+    color: #2C2C2C;
     border: none;
     border-radius: 5px;
-    margin-right: 10px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 button {
     padding: 10px 20px;
-    background: #3A5F7D;
+    background: #D4B740;
     color: #000;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
+.aiResponse {
+    background: #A8CBB7;
+    color: #2C2C2C;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    max-width: 500px;
+}
+
 .flat-nav {
-    padding: 10px 20px;
-    box-shadow: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    padding: 10px 0;
 }
 
 .flat-nav ul {
@@ -43,20 +71,20 @@ button {
 }
 
 .flat-nav li {
-    margin-right: 20px;
+    margin-right: 25px;
 }
 
 .flat-nav a {
-    background-color: #2c4531;
+    background-color: #C88EA7;
     text-decoration: none;
-    color: #F5E8C7;
+    color: #D3CFC9;
     font-weight: 500;
     padding: 8px 12px;
+    border-radius: 4px;
     transition: background-color 0.2s, color 0.2s;
 }
 
 .flat-nav a:hover {
-    background-color: #2c4531;
-    border-radius: 4px;
-    color: #9f967f;
+    background-color: #CEAFB8;
+    color: #94918d;
 }
