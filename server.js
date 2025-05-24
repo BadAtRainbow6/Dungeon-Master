@@ -44,32 +44,6 @@ app.post('/api/ai', async (req, res) => {
             }
         );
 
-        const mockResponse = {
-            "location": "Ancient Cavern",
-            "description": "You stand in a dimly lit cavern. The walls are damp with moss, and you can hear the distant drip of water echoing through the tunnels. A faint glow comes from a passage to the east.",
-            "inventory": [
-                "Rusty Sword",
-                "Torch (half-burned)",
-                "Old Map Fragment"
-            ],
-            "choices": [
-                {
-                "id": 1,
-                "text": "Take the eastern passage"
-                },
-                {
-                "id": 2,
-                "text": "Inspect the cavern walls"
-                },
-                {
-                "id": 3,
-                "text": "Check your map"
-                }
-            ],
-            "ai_hint": "The glow from the east might indicate a magical presence. The walls may hide secrets."
-        }
-
-
         const reply = response.data.choices[0].message.content;
 
         messageHistory.push({ role: "assistant", content: reply });
