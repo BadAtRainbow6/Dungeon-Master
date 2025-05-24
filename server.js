@@ -8,40 +8,14 @@ const app = express()
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
-//async function generateResponse(prompt, res) {
-//    try {
-//        const userMessage = prompt.body.message;
-//        const response = await axios.post(
-//            'https://openrouter.ai/api/v1/chat/completions',
-//            {
-//                model: "mistral/mistral-7b-instruct", // free, decent for game generation
-//                messages: [
-//                    { role: "system", content: "You are an AI that designs and runs a MUD (multi-user dungeon), along the lines of Zork." },
-//                    { role: "user", content: userMessage }
-//                ]
-//            },
-//            {
-//                headers: {
-//                    Authorization: `Bearer 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`,
-//                    'Content-Type': 'application/json'
-//                }
-//            }
-//        );
-
-//        const reply = response.data.choices[0].message.content;
-//        res.json({ response: reply })
-//    } catch (error) {
-//        console.error("API Error:", error.message);
-//    }
-//}
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 
 app.get('/settings', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'settings.html'));
+    res.sendFile(path.join(__dirname, 'public', 'settings.html'));
 });
 
 
@@ -76,5 +50,5 @@ app.post('/api/ai', async (req, res) => {
 });
 
 app.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+    console.log(`Server running at http://${hostname}:${port}/`);
 });
