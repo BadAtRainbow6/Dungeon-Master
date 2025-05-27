@@ -1,7 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #4B3F72;
-    color: #f0f0f0;
+    font-family: 'Garamond', serif;
+    background: #d8e8dd;
+    color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,32 +23,67 @@ h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
     padding: 10px 20px;
-    color: #FAF3E0;
+    color: #5b4636;
 }
 
 input[type="text"] {
     width: 300px;
     padding: 10px;
-    background: #D3CFC9;
-    color: #2C2C2C;
+    background: #4b8f88 ;
+    color: #fefcf9;
     border: none;
     border-radius: 5px;
     margin-bottom: 10px;
     text-align: center;
 }
 
+/* For Chrome, Safari, Opera */
+input::-webkit-input-placeholder {
+    color: #fefcf9;
+    opacity: 0.7;
+}
+
+/* Standard placeholder */
+input[type="text"]::placeholder {
+    color: #fefcf9;
+    opacity: 0.7;
+}
+
+/* For Internet Explorer 10-11 */
+input[type="text"]:-ms-input-placeholder {
+    color: #fefcf9;
+    opacity: 0.7;
+}
+
+/* For Microsoft Edge */
+input[type="text"]::-ms-input-placeholder {
+    color: #fefcf9;
+    opacity: 0.7;
+}
+
+/* For Firefox 19+ */
+input[type="text"]::-moz-placeholder {
+    color: #fefcf9;
+    opacity: 0.7;
+}
+
 button {
     padding: 10px 20px;
-    background: #D4B740;
-    color: #000;
+    background: #7b9b3d;
+    color: #5b4636;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
+button:hover {
+    background: #4a773c;
+    color: #d39a6f;
+}
+
 .aiResponse {
-    background: #A8CBB7;
-    color: #2C2C2C;
+    background: #4a773c ;
+    color: #fefcf9;
     padding: 20px;
     border-radius: 5px;
     margin-top: 20px;
@@ -75,9 +110,9 @@ button {
 }
 
 .flat-nav a {
-    background-color: #C88EA7;
+    background-color: #7b9b3d;
     text-decoration: none;
-    color: #D3CFC9;
+    color: #5b4636;
     font-weight: 500;
     padding: 8px 12px;
     border-radius: 4px;
@@ -85,6 +120,6 @@ button {
 }
 
 .flat-nav a:hover {
-    background-color: #CEAFB8;
-    color: #94918d;
+    background-color: #4a773c;
+    color: #d39a6f;
 }
