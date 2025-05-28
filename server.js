@@ -9,6 +9,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('public'));
 app.use(express.json());
 
+let messageHistory = [
+    {
+        role: "system",
+        content: "You are a text-based adventure AI. The user is the player. Respond as if generating a MUD room, and continue the game story with each message."
+    }
+];
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
@@ -19,20 +25,17 @@ app.get('/settings', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'settings.html'));
 });
 
-
 app.post('/api/ai', async (req, res) => {
     try {
         const userMessage = req.body.message;
 
+        messageHistory.push({ role: "user", content: userMessage });
 
         const response = await axios.post(
             'https://openrouter.ai/api/v1/chat/completions',
             {
                 model: "meta-llama/llama-4-maverick:free",
-                messages: [
-                    { role: "system", content: "You are an AI that designs and runs a MUD (multi-user dungeon), along the lines of Zork." },
-                    { role: "user", content: userMessage }
-                ]
+                messages: messageHistory
             },
             {
                 headers: {
@@ -43,7 +46,18 @@ app.post('/api/ai', async (req, res) => {
         );
 
         const reply = response.data.choices[0].message.content;
+
+        messageHistory.push({ role: "assistant", content: reply });
+
         res.json({ response: reply });
+
+        if (messageHistory.length > 22) {
+            // Keep only the system message and last 10 exchanges
+            messageHistory = [
+                messageHistory[0],
+                ...messageHistory.slice(-20)
+            ];
+        }
     } catch (error) {
         console.error("API Error:", error.response?.data || error.message);
         res.status(500).json({ response: "AI request failed." });

@@ -44,8 +44,25 @@
                 throw new Error('Network response was not ok');
             }
 
+            
             const data = await res.json();
+            const response = data.response;
+            
+            const formatted = `
+            <b>Location: </b> ${response.location}
+            </br></br>
+            <b>Description: </b> ${response.description}
+            </br></br>
+            <b>Inventory: </b>
+            <p>${response.inventory.map(inv => `${inv}`)}</p>
+            <b>Choices</b>
+            <ol>
+                ${response.choices.map(choice => `<li>${choice.text}</li>`).join('') }
+            </ol>
+            `
+            
             responseParagraph.textContent = data.response || 'No response from AI.';
+            //responseParagraph.innerHTML = formatted;
         } catch (err) {
             responseParagraph.textContent = 'Error: ' + err.message;
         }
