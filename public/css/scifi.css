@@ -1,0 +1,164 @@
+body {
+    font-family: 'Garamond', serif;
+    background: #4b5464;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+/* Center wrapper for all content */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 250px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    color: #5b4636;
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    background: #4b8f88 ;
+    color: #fefcf9;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* For Chrome, Safari, Opera */
+input::-webkit-input-placeholder {
+    color: #fefcf9;
+    opacity: 0.7;
+}
+
+/* Standard placeholder */
+input[type="text"]::placeholder {
+    color: #fefcf9;
+    opacity: 0.7;
+}
+
+/* For Internet Explorer 10-11 */
+input[type="text"]:-ms-input-placeholder {
+    color: #fefcf9;
+    opacity: 0.7;
+}
+
+/* For Microsoft Edge */
+input[type="text"]::-ms-input-placeholder {
+    color: #fefcf9;
+    opacity: 0.7;
+}
+
+/* For Firefox 19+ */
+input[type="text"]::-moz-placeholder {
+    color: #fefcf9;
+    opacity: 0.7;
+}
+
+button {
+    padding: 10px 20px;
+    background: #7b9b3d;
+    color: #5b4636;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4a773c;
+    color: #d39a6f;
+}
+
+.aiResponse {
+    background: #4a773c ;
+    color: #fefcf9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    max-width: 500px;
+}
+
+.flat-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    padding: 10px 0;
+}
+
+.flat-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.flat-nav li {
+    margin-right: 25px;
+}
+
+.flat-nav a {
+    background-color: #7b9b3d;
+    text-decoration: none;
+    color: #5b4636;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.flat-nav a:hover {
+    background-color: #4a773c;
+    color: #d39a6f;
+}
+
+/* Settings Page */
+
+.settings {
+    font-family: 'Garamond', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.theme{
+    font-family: 'Garamond', serif;
+    color: #5b4636;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    font-size: 1.8em;
+}
+
+select {
+    width: 200px;
+    padding: 10px;
+    background: #4b8f88 ;
+    color: #fefcf9;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.saveTheme {
+    padding: 10px 20px;
+    background: #7b9b3d;
+    color: #5b4636;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

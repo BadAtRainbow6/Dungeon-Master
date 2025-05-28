@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="main.css">
+    <link id="theme-link" rel="stylesheet" href="/css/scifi.css">
 </head>
 
 <body>
@@ -67,6 +67,13 @@
             responseParagraph.textContent = 'Error: ' + err.message;
         }
     });
+
+    const themeLink = document.getElementById('theme-link');
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme) {
+        themeLink.href = savedTheme;
+    }
 </script>
 
 </html>

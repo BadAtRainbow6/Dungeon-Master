@@ -6,6 +6,7 @@ const axios = require('axios');
 const app = express()
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 app.use(express.json());
 
 let messageHistory = [

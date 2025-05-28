@@ -1,15 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings</title>
-    <link rel="stylesheet" href="main.css">
+    <link id="theme-link" rel="stylesheet" href="/css/scifi.css">
     <nav class="flat-nav">
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/settings">Settings</a></li>
         </ul>
     </nav>
-        <p> Coming soon: Theme changes, accessibility settings</p>
+
+<body>
+    <h1 class="settings">Settings</h1>
+    <div class="theme">
+        <label for="theme">Select Theme:</label>
+        <select id="theme">
+            <option value="default" selected disabled>Choose..</option>
+            <option value="/css/fantasy.css">Fantasy</option>
+            <option value="/css/scifi.css">Sci-fi</option>
+            <option value="/css/modern.css">Modern</option>
+            <option value="/css/grimdark.css">Grimdark</option>
+            <option value="/css/comic.css">Comic</option>
+        </select>
+    </div>
+    <button class="saveTheme" onclick="saveTheme()">Save Theme</button>
+</body>
+
+<script>
+    const themeLink = document.getElementById('theme-link');
+    const themeSelect = document.getElementById('theme');
+
+    // Apply saved theme on page load
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        themeLink.href = savedTheme;
+        themeSelect.value = savedTheme;
+    }
+
+    // Save and apply theme when button clicked
+    function saveTheme() {
+        const selectedTheme = themeSelect.value;
+        themeLink.href = selectedTheme;
+        localStorage.setItem('theme', selectedTheme);
+    }
+
+</script>
+
 </html>
