@@ -1,11 +1,13 @@
 body {
     font-family: 'Garamond', serif;
-    background: #d8e8dd;
+    background-image: url('/css/bg-images/comic-bg.jpg');
+    background-size: cover;
+    background-position: center;
     color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Start vertically so nav doesn't clash */
+    justify-content: flex-start;
     height: 100vh;
     margin: 0;
     text-align: center;
@@ -29,7 +31,7 @@ h1 {
 input[type="text"] {
     width: 300px;
     padding: 10px;
-    background: #4b8f88 ;
+    background: #4b8f88;
     color: #fefcf9;
     border: none;
     border-radius: 5px;
@@ -82,7 +84,7 @@ button:hover {
 }
 
 .aiResponse {
-    background: #4a773c ;
+    background: #4a773c;
     color: #fefcf9;
     padding: 20px;
     border-radius: 5px;
@@ -122,4 +124,43 @@ button:hover {
 .flat-nav a:hover {
     background-color: #4a773c;
     color: #d39a6f;
+}
+
+/* Settings Page */
+
+.settings {
+    font-family: 'Garamond', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.theme {
+    font-family: 'Garamond', serif;
+    color: #5b4636;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    font-size: 1.8em;
+}
+
+select {
+    width: 200px;
+    padding: 10px;
+    background: #4b8f88;
+    color: #fefcf9;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.saveTheme {
+    padding: 10px 20px;
+    background: #7b9b3d;
+    color: #5b4636;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
