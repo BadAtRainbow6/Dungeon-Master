@@ -1,6 +1,8 @@
 body {
     font-family: 'Garamond', serif;
-    background: #4b5464;
+    background-image: url('/css/bg-images/scifi-bg.jpg');
+    background-size: cover;
+    background-position: center;
     color: #333;
     display: flex;
     flex-direction: column;
@@ -29,7 +31,7 @@ h1 {
 input[type="text"] {
     width: 300px;
     padding: 10px;
-    background: #4b8f88 ;
+    background: #4b8f88;
     color: #fefcf9;
     border: none;
     border-radius: 5px;
@@ -82,7 +84,7 @@ button:hover {
 }
 
 .aiResponse {
-    background: #4a773c ;
+    background: #4a773c;
     color: #fefcf9;
     padding: 20px;
     border-radius: 5px;
@@ -134,7 +136,7 @@ button:hover {
     margin-top: 100px;
 }
 
-.theme{
+.theme {
     font-family: 'Garamond', serif;
     color: #5b4636;
     display: flex;
@@ -147,7 +149,7 @@ button:hover {
 select {
     width: 200px;
     padding: 10px;
-    background: #4b8f88 ;
+    background: #4b8f88;
     color: #fefcf9;
     border: none;
     border-radius: 5px;
