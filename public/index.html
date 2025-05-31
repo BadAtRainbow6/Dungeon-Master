@@ -18,7 +18,7 @@
     <div class="container">
         <h1>Dungeon Master</h1>
 
-        <p class="aiResponse"> Here is where the AI text goes</p>
+        <p class="aiResponse" style="white-space: pre-wrap;"> Here is where the AI text goes</p>
         <input type="text" id="input" placeholder="Type your message here...">
         <button id="send">Send</button>
     </div>
@@ -45,7 +45,7 @@
             }
 
             const data = await res.json();
-            responseParagraph.textContent = data.response || 'No response from AI.';
+            responseParagraph.innerText = data.response || 'No response from AI.';
         } catch (err) {
             responseParagraph.textContent = 'Error: ' + err.message;
         }
