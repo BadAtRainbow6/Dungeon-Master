@@ -90,7 +90,7 @@ button:hover {
     background-repeat: no-repeat;
     border-radius: 1em;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
+    width: 800px;
     height: 400px;
     padding: 0;
     overflow: hidden;
