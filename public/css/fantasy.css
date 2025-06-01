@@ -18,13 +18,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 250px;
+    margin-top: 150px;
 }
 
 h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    padding: 10px 20px;
+    padding-bottom: 20px;
     color: #5b4636;
 }
 
@@ -71,16 +71,16 @@ input[type="text"]::-moz-placeholder {
 
 button {
     padding: 10px 20px;
-    background: #7b9b3d;
-    color: #5b4636;
+    background: #433d9b;
+    color: #E0E0FF;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background: #4a773c;
-    color: #d39a6f;
+    background: #5a51ca;
+    color: #E0E0FF;
 }
 
 .speechBubble {
@@ -90,14 +90,18 @@ button:hover {
     background-repeat: no-repeat;
     border-radius: 1em;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    height: 400px;
+    width: 650px;
+    height: 350px;
     padding: 0;
     overflow: hidden;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    resize: none;
+    flex-wrap: nowrap;
+    text-align: center;
+    text-overflow: ellipsis;
 }
 
 .aiResponse {
@@ -142,7 +146,7 @@ button:hover {
 }
 
 .flat-nav li {
-    margin-right: 25px;
+    margin-right: 5px;
 }
 
 .flat-nav a {
