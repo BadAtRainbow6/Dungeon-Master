@@ -1,5 +1,5 @@
 body {
-    font-family: 'Garamond', serif;
+    font-family: 'Cinzel', serif;
     background-image: url('/css/bg-images/grimdark-bg.jpg');
     background-size: cover;
     background-position: center;
@@ -18,20 +18,20 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 250px;
+    margin-top: 150px;
 }
 
 h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    padding: 10px 20px;
-    color: #5b4636;
+    padding-bottom: 20px;
+    color: #e1dad1;
 }
 
 input[type="text"] {
     width: 300px;
     padding: 10px;
-    background: #4b8f88;
+    background: #A8763E;
     color: #fefcf9;
     border: none;
     border-radius: 5px;
@@ -71,25 +71,64 @@ input[type="text"]::-moz-placeholder {
 
 button {
     padding: 10px 20px;
-    background: #7b9b3d;
-    color: #5b4636;
+    background: #862D2D;
+    color: #E0E0FF;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background: #4a773c;
-    color: #d39a6f;
+    background: #ac3f3f;
+    color: #E0E0FF;
+}
+
+.speechBubble {
+    background-image: url('/css/bg-images/grimdarkbubble.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 650px;
+    height: 350px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    resize: none;
+    flex-wrap: nowrap;
+    text-align: center;
+    text-overflow: ellipsis;
 }
 
 .aiResponse {
-    background: #4a773c;
-    color: #fefcf9;
-    padding: 20px;
-    border-radius: 5px;
-    margin-top: 20px;
-    max-width: 500px;
+    color: #D0CBC4;
+    width: 80%;
+    height: 80%;
+    overflow-y: auto;
+    padding: 15px;
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    font-family: 'Cinzel', serif;
+
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.aiResponse::-webkit-scrollbar {
+    width: 8px;
+}
+
+.aiResponse::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.aiResponse::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 .flat-nav {
@@ -108,13 +147,13 @@ button:hover {
 }
 
 .flat-nav li {
-    margin-right: 25px;
+    margin-right: 5px;
 }
 
 .flat-nav a {
-    background-color: #7b9b3d;
+    background-color: #547D6C;
     text-decoration: none;
-    color: #5b4636;
+    color: #E0E0FF;
     font-weight: 500;
     padding: 8px 12px;
     border-radius: 4px;
@@ -122,14 +161,14 @@ button:hover {
 }
 
 .flat-nav a:hover {
-    background-color: #4a773c;
-    color: #d39a6f;
+    background-color: #659e86;
+    color: #E0E0FF;
 }
 
 /* Settings Page */
 
 .settings {
-    font-family: 'Garamond', serif;
+    font-family: 'Cinzel', serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -137,8 +176,8 @@ button:hover {
 }
 
 .theme {
-    font-family: 'Garamond', serif;
-    color: #5b4636;
+    font-family: 'Cinzel', serif;
+    color: #e1dad1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,8 +188,8 @@ button:hover {
 select {
     width: 200px;
     padding: 10px;
-    background: #4b8f88;
-    color: #fefcf9;
+    background: #862D2D;
+    color: #E0E0FF;
     border: none;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -158,9 +197,14 @@ select {
 
 .saveTheme {
     padding: 10px 20px;
-    background: #7b9b3d;
-    color: #5b4636;
+    background: #A8763E;
+    color: #E0E0FF;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.saveTheme:hover {
+    background: #C18B4A;
+    color: #E0E0FF;
 }
