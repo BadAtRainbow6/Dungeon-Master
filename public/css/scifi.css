@@ -202,3 +202,8 @@ select {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.saveTheme:hover {
+    background: #839284;
+    color: #ececec;
+}

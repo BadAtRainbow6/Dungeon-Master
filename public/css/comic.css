@@ -1,5 +1,5 @@
 body {
-    font-family: 'Garamond', serif;
+    font-family: 'Karla', sans-serif;
     background-image: url('/css/bg-images/comic-bg.jpg');
     background-size: cover;
     background-position: center;
@@ -25,13 +25,13 @@ h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
     padding-bottom: 20px;
-    color: #5b4636;
+    color: #f4f0ff;
 }
 
 input[type="text"] {
     width: 300px;
     padding: 10px;
-    background: #4b8f88;
+    background: #b76ef1;
     color: #fefcf9;
     border: none;
     border-radius: 5px;
@@ -71,27 +71,27 @@ input[type="text"]::-moz-placeholder {
 
 button {
     padding: 10px 20px;
-    background: #433d9b;
-    color: #E0E0FF;
+    background: #f78181;
+    color: #f4f0ff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background: #5a51ca;
-    color: #E0E0FF;
+    background: #fc9a9a;
+    color: #f4f0ff;
 }
 
 .speechBubble {
-    background-image: url('/css/bg-images/fantasybubble.jpg');
+    background-image: url('/css/bg-images/comicbubble.jpg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 1em;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 650px;
-    height: 350px;
+    width: 700px;
+    height: 400px;
     padding: 0;
     overflow: hidden;
     position: relative;
@@ -105,14 +105,14 @@ button:hover {
 }
 
 .aiResponse {
-    color: #5b4636;
+    color: #444;
     width: 70%;
     height: 70%;
     overflow-y: auto;
-    padding: 15px;
+    padding-top: 70px;
     border-radius: 0.5em;
     box-sizing: border-box;
-    font-family: 'Georgia', serif;
+    font-family: 'Karla', sans-serif;
     font-size: 1rem;
     line-height: 1.4;
 }
@@ -150,9 +150,9 @@ button:hover {
 }
 
 .flat-nav a {
-    background-color: #7b9b3d;
+    background-color: #65c8ba;
     text-decoration: none;
-    color: #5b4636;
+    color: #f4f0ff;
     font-weight: 500;
     padding: 8px 12px;
     border-radius: 4px;
@@ -160,14 +160,14 @@ button:hover {
 }
 
 .flat-nav a:hover {
-    background-color: #4a773c;
-    color: #d39a6f;
+    background-color: #62d8c8;
+    color: #f4f0ff;
 }
 
 /* Settings Page */
 
 .settings {
-    font-family: 'Garamond', serif;
+    font-family: 'Karla', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -175,7 +175,7 @@ button:hover {
 }
 
 .theme {
-    font-family: 'Garamond', serif;
+    font-family: 'Karla', sans-serif;
     color: #5b4636;
     display: flex;
     flex-direction: column;
@@ -187,7 +187,7 @@ button:hover {
 select {
     width: 200px;
     padding: 10px;
-    background: #4b8f88;
+    background: #65c8ba;
     color: #fefcf9;
     border: none;
     border-radius: 5px;
@@ -196,9 +196,14 @@ select {
 
 .saveTheme {
     padding: 10px 20px;
-    background: #7b9b3d;
-    color: #5b4636;
+    background: #b76ef1;
+    color: #fefcf9;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.saveTheme:hover {
+    background: #c886fe;
+    color: #f4f0ff;
 }
