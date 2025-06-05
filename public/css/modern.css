@@ -1,5 +1,5 @@
 body {
-    font-family: 'Garamond', serif;
+    font-family: 'Poppins', sans-serif;
     background-image: url('/css/bg-images/modern-bg.jpg');
     background-size: cover;
     background-position: center;
@@ -25,14 +25,14 @@ h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
     padding-bottom: 20px;
-    color: #5b4636;
+    color: #bab5cb;
 }
 
 input[type="text"] {
     width: 300px;
     padding: 10px;
-    background: #4b8f88;
-    color: #fefcf9;
+    background: #FF3CAC;
+    color: #1C1C2E;
     border: none;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -41,31 +41,31 @@ input[type="text"] {
 
 /* For Chrome, Safari, Opera */
 input::-webkit-input-placeholder {
-    color: #fefcf9;
+    color: #1C1C2E;
     opacity: 0.7;
 }
 
 /* Standard placeholder */
 input[type="text"]::placeholder {
-    color: #fefcf9;
+    color: #1C1C2E;
     opacity: 0.7;
 }
 
 /* For Internet Explorer 10-11 */
 input[type="text"]:-ms-input-placeholder {
-    color: #fefcf9;
+    color: #1C1C2E;
     opacity: 0.7;
 }
 
 /* For Microsoft Edge */
 input[type="text"]::-ms-input-placeholder {
-    color: #fefcf9;
+    color: #1C1C2E;
     opacity: 0.7;
 }
 
 /* For Firefox 19+ */
 input[type="text"]::-moz-placeholder {
-    color: #fefcf9;
+    color: #1C1C2E;
     opacity: 0.7;
 }
 
@@ -79,12 +79,12 @@ button {
 }
 
 button:hover {
-    background: #5a51ca;
+    background: #645dc1;
     color: #E0E0FF;
 }
 
 .speechBubble {
-    background-image: url('/css/bg-images/fantasybubble.jpg');
+    background-image: url('/css/bg-images/modernbubble.jpg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -106,13 +106,13 @@ button:hover {
 
 .aiResponse {
     color: #5b4636;
-    width: 70%;
-    height: 70%;
+    width: 80%;
+    height: 80%;
     overflow-y: auto;
     padding: 15px;
     border-radius: 0.5em;
     box-sizing: border-box;
-    font-family: 'Georgia', serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     line-height: 1.4;
 }
@@ -150,9 +150,9 @@ button:hover {
 }
 
 .flat-nav a {
-    background-color: #7b9b3d;
+    background-color: #3D2E64;
     text-decoration: none;
-    color: #5b4636;
+    color: #EAEAEA;
     font-weight: 500;
     padding: 8px 12px;
     border-radius: 4px;
@@ -160,14 +160,14 @@ button:hover {
 }
 
 .flat-nav a:hover {
-    background-color: #4a773c;
-    color: #d39a6f;
+    background-color: #594884;
+    color: #EAEAEA;
 }
 
 /* Settings Page */
 
 .settings {
-    font-family: 'Garamond', serif;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -175,8 +175,7 @@ button:hover {
 }
 
 .theme {
-    font-family: 'Garamond', serif;
-    color: #5b4636;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -184,11 +183,16 @@ button:hover {
     font-size: 1.8em;
 }
 
+.select {
+    background-color: #333;
+    color: #EAEAEA;
+}
+
 select {
     width: 200px;
     padding: 10px;
-    background: #4b8f88;
-    color: #fefcf9;
+    background: #FF3CAC;
+    color: #EAEAEA;
     border: none;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -196,9 +200,14 @@ select {
 
 .saveTheme {
     padding: 10px 20px;
-    background: #7b9b3d;
-    color: #5b4636;
+    background: #433d9b;
+    color: #E0E0FF;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.saveTheme:hover {
+    background: #645dc1;
+    color: #E0E0FF;
 }
