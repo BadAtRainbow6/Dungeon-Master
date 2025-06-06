@@ -19,7 +19,7 @@
         <h1>Dungeon Master</h1>
 
         <div class="speechBubble">
-        <p class="aiResponse">Please input a prompt below</p>
+            <p class="aiResponse">Please input a prompt below</p>
         </div>
         <input type="text" id="input" placeholder="Type your message here...">
         <button id="send">Send</button>
@@ -46,10 +46,10 @@
                 throw new Error('Network response was not ok');
             }
 
-            
+
             const data = await res.json();
             const response = data.response;
-            
+
             const formatted = `
             <b>Location: </b> ${response.location}
             </br></br>
@@ -59,10 +59,10 @@
             <p>${response.inventory.map(inv => `${inv}`)}</p>
             <b>Choices</b>
             <ol>
-                ${response.choices.map(choice => `<li>${choice.text}</li>`).join('') }
+                ${response.choices.map(choice => `<li>${choice.text}</li>`).join('')}
             </ol>
             `
-            
+
             responseParagraph.textContent = data.response || 'No response from AI.';
             //responseParagraph.innerHTML = formatted;
         } catch (err) {
